@@ -4,6 +4,32 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style>
+
+      <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+      
       <title>Trust Template</title>
       <meta content="width=device-width, initial-scale=1" name="viewport">
       <link href="style.css" rel="stylesheet" type="text/css">
@@ -59,6 +85,12 @@
                   <div class="med-divider"></div>
                </div>
 
+               <p>A Collapsible:</p>
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+               
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr>
     <td style="width: 33%; padding: 10px; vertical-align: top;">
