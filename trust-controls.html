@@ -85,11 +85,196 @@
                   <div class="med-divider"></div>
                </div>
 
-               <p>A Collapsible:</p>
-<button type="button" class="collapsible">Open Collapsible</button>
+<p><h3 style="background-color: #000; color: #02c1a8; padding: 10px;>Access Control</h3></p>
+<button type="button" class="collapsible">Data Access, Logging, Password Security</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p><strong>Data Access</strong><br>
+  JupiterOne encrypts all data at rest and in transit.<br>
+  JupiterOne implements role-based access control (RBAC) on all data, ensuring that employees only have access to the data they need to perform their jobs.<br>
+  JupiterOne conducts regular data access reviews to ensure that employees only have access to the data they need to perform their jobs.<br>
+  Access is removed for terminated employees within 24 hours.</p>
+  <p><strong>Logging</strong><br>
+  JupiterOne has added multiple logging tools to track the company's activity, endpoint, and infrastructure.<br>
+  JupiterOne retains logs for a period of time in accordance with regulatory requirements.<br>
+  JupiterOne generates alerts on changes and events such as log tampering.</p>
+  <p><strong>Password Security</strong><br>
+  JupiterOne requires employees to use strong passwords and to change their passwords regularly.<br>
+  JupiterOne implements password lockout policies to prevent brute-force attacks.<br>
+  JupiterOne uses multi-factor authentication (MFA) for remote network access and API access.</p>
 </div>
+
+<p><strong>App Security</strong></p>
+<button type="button" class="collapsible">Code Analysis, Credential Management, SDLC, Patch Management, WAF</button>
+<div class="content">
+  <p><strong>Code Analysis</strong><br>
+  All code runs through automated testing and static code analysis and receives approval from one or more distinct team members.<br>
+  All updates are required to pass automated testing before deployment to staging and production.</p>
+  <p><strong>Credential Management</strong><br>
+  All infrastructure secrets are stored in AWS Key Management Services.<br>
+  JupiterOne requires MFA for accessing sensitive systems and data.</p>
+  <p><strong>Software Development Lifecycle</strong><br>
+  Fully implemented SDLC includes version control, continuous integration, automated lint, end-to-end testing, and segregation of duties.</p>
+  <p><strong>Vulnerability and Patch Management</strong><br>
+  Uses Google Cloud Run and GitHub's Dependabot to scan for vulnerabilities.<br>
+  High-risk security patches applied and verified at least monthly.</p>
+  <p><strong>Web Application Firewall</strong><br>
+  Firewall setup on GCP manages ingress/egress traffic and workstations via Palo Alto's Global Protect.<br>
+  The WAF is monitored 24/7 and updated as needed.</p>
+</div>
+
+<p><strong>Business Continuity</strong></p>
+<button type="button" class="collapsible">Recovery Objectives, Hosting</button>
+<div class="content">
+  <p><strong>Recovery Time Objective</strong><br>
+  Less than 24 hours.</p>
+  <p><strong>Recovery Point Objective</strong><br>
+  Less than 24 hours.</p>
+  <p><strong>Hosting</strong><br>
+  Amazon AWS, default region: USA East.</p>
+</div>
+
+<p><strong>Corporate Security</strong></p>
+<button type="button" class="collapsible">Asset Management, Email Protection, Employee Training, HR Security, Incident Response, Internal Assessments</button>
+<div class="content">
+  <p><strong>Asset Management Practices</strong><br>
+  Inventory of all corporate assets is maintained.<br>
+  Processes are in place for access control and secure asset disposal.</p>
+  <p><strong>Email Protection</strong><br>
+  Spam filtering, content filtering, malware scanning are in place.<br>
+  Employees are trained to avoid phishing.</p>
+  <p><strong>Employee Training</strong><br>
+  Annual security training and control-specific training.</p>
+  <p><strong>HR Security</strong><br>
+  Background checks before access to IT systems.<br>
+  Secure offboarding process.</p>
+  <p><strong>Incident Response</strong><br>
+  A plan is in place for addressing and mitigating incidents.</p>
+  <p><strong>Internal Assessments</strong><br>
+  Regular evaluations to identify and fix vulnerabilities.</p>
+</div>
+
+<p><strong>Data Privacy</strong></p>
+<button type="button" class="collapsible">Cookies, Breach Notifications, Privacy Training, White Paper</button>
+<div class="content">
+  <p><strong>Cookies</strong><br>
+  JupiterOne uses tracking technologies to improve services.</p>
+  <p><strong>Data Breach Notifications</strong><br>
+  Customers are notified promptly; containment strategies are implemented.</p>
+  <p><strong>Employee Privacy Training</strong><br>
+  Employees complete security training and acknowledge policies.</p>
+  <p><strong>Data Security White Paper</strong><br>
+  Available upon request.</p>
+</div>
+
+<p><strong>Data Security</strong></p>
+<button type="button" class="collapsible">Access Reviews, Backups, Erasure, Encryption, Physical Security</button>
+<div class="content">
+  <p><strong>Access Reviews</strong><br>
+  Quarterly reviews on all internal applications.</p>
+  <p><strong>Backups Enabled</strong><br>
+  Daily backups with annual test verification.</p>
+  <p><strong>Data Erasure</strong><br>
+  Data deleted 30 days after contract end.</p>
+  <p><strong>Encryption-at-rest</strong><br>
+  AES-256 encryption at the object and volume level.</p>
+  <p><strong>Encryption-in-transit</strong><br>
+  TLS 1.2+ encryption for all data in transit.</p>
+  <p><strong>Physical Security</strong><br>
+  Managed by AWS Platform (AWS Compliance).</p>
+</div>
+
+<p><strong>Endpoint Security</strong></p>
+<button type="button" class="collapsible">Disk Encryption, DNS Filtering, Endpoint Detection and Response</button>
+<div class="content">
+  <p><strong>Disk Encryption</strong><br>
+  Employee workstations use full-disk encryption for enhanced security.</p>
+  <p><strong>DNS Filtering</strong><br>
+  Network monitoring solutions track internet traffic and block malicious activity.</p>
+  <p><strong>Endpoint Detection and Response</strong><br>
+  SentinelOne is installed on all devices to monitor and protect endpoints.</p>
+</div>
+
+<p><strong>Infrastructure</strong></p>
+<button type="button" class="collapsible">AWS, Anti-DDoS, BC/DR, Infrastructure Security, Separate Production Environment</button>
+<div class="content">
+  <p><strong>AWS</strong><br>
+  AWS is used for infrastructure, featuring security groups, IAM for user permissions, and compliance measures.</p>
+  <p><strong>Anti-DDoS</strong><br>
+  Google Cloud Armor protects against volumetric DDoS attacks for applications behind load balancers.</p>
+  <p><strong>BC/DR</strong><br>
+  Business Continuity and Disaster Recovery plans include data backup, system replication, and failover strategies.</p>
+  <p><strong>Infrastructure Security</strong><br>
+  Security experts monitor infrastructure using firewalls, IDS/IPS, endpoint protection, encryption, vulnerability scanning, and patching.</p>
+  <p><strong>Separate Production Environment</strong><br>
+  Production systems are isolated from development and testing to minimize disruption risk.</p>
+</div>
+
+<p><strong>Legal</strong></p>
+<button type="button" class="collapsible">Subprocessors, Cyber Insurance, Terms of Service, Privacy Policy</button>
+<div class="content">
+  <p><strong>Subprocessors</strong><br>
+  JupiterOne’s third-party sub-processor list is publicly available.</p>
+  <p><strong>Cyber Insurance</strong><br>
+  Insurance policy covers major security incidents.</p>
+  <p><strong>Terms of Service</strong><br>
+  Available for review.</p>
+  <p><strong>Privacy Policy</strong><br>
+  Available for review.</p>
+</div>
+
+<p><strong>Network Security</strong></p>
+<button type="button" class="collapsible">DMARC, Firewall, IDS/IPS, Traffic Filtering, Virtual Private Cloud</button>
+<div class="content">
+  <p><strong>DMARC</strong><br>
+  Enabled for JupiterOne.com to reduce spoofing risk.</p>
+  <p><strong>Firewall</strong><br>
+  AWS firewall controls ingress and egress traffic.</p>
+  <p><strong>IDS/IPS</strong><br>
+  Intrusion Detection System monitors unauthorized activity.</p>
+  <p><strong>Traffic Filtering</strong><br>
+  Open web traffic is monitored via network security solutions.</p>
+  <p><strong>Virtual Private Cloud</strong><br>
+  VPCs are secured to protect network resources.</p>
+</div>
+
+<p><strong>Policies</strong></p>
+<button type="button" class="collapsible">Vendor Management, Privacy, BC/DR, Change Management, Incident Response, Info Security, Data Backup</button>
+<div class="content">
+  <p><strong>Vendor Management Policy</strong><br>
+  Available upon request.</p>
+  <p><strong>Privacy Policy</strong><br>
+  Available upon request.</p>
+  <p><strong>Business Continuity and Disaster Recovery Policy</strong><br>
+  Available upon request.</p>
+  <p><strong>Change Management Policy - Code Deployment</strong><br>
+  Available upon request.</p>
+  <p><strong>Incident Response Plan</strong><br>
+  Available upon request.</p>
+  <p><strong>Information Security Policy</strong><br>
+  Available upon request.</p>
+  <p><strong>Data Backup Policy</strong><br>
+  Available upon request.</p>
+</div>
+
+<p><strong>Product Security</strong></p>
+<button type="button" class="collapsible">Audit Logging, Data Security, Multi-Factor Authentication, Role-Based Access Control, SSO Support</button>
+<div class="content">
+  <p><strong>Audit Logging</strong><br>
+  Activity and data elements (user ID, timestamp, IP, locale, event name) are logged with restricted access.</p>
+  <p><strong>Data Security</strong><br>
+  Volume and object-level encryption at rest.<br>
+  Data encrypted in transit.<br>
+  Access controls restrict data access.<br>
+  System hosted on third-party cloud with AWS physical controls.</p>
+  <p><strong>Multi-Factor Authentication</strong><br>
+  MFA required for internet access to critical info, admins, and vendor networks.</p>
+  <p><strong>Role-Based Access Control</strong><br>
+  Access granted based on user roles and least privilege principle.</p>
+  <p><strong>SSO Support</strong><br>
+  Single Sign-On is supported for user access.</p>
+</div>
+
+               
                
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr>
