@@ -60,143 +60,126 @@
                </div>
 
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
-  <tr valign="top">
-    <td style="width: 33%; padding: 10px;">
+  <tr>
+    <td style="width: 33%; padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Access Control</h2>
-      <p><strong>Data Access</strong></p>
-      <p>JupiterOne encrypts all data at rest and in transit.</p>
-      <p>JupiterOne implements role-based access control (RBAC) on all data, ensuring that employees only have access to the data they need to perform their jobs.</p>
-      <p>JupiterOne conducts regular data access reviews to ensure that employees only have access to the data they need to perform their jobs.</p>
-      <p>Access is removed for terminated employees within 24 hours.</p>
-      <p><strong>Logging</strong></p>
-      <p>JupiterOne has added multiple logging tools to track the company's activity, endpoint, and infrastructure.</p>
-      <p>JupiterOne retains logs for a period of time in accordance with regulatory requirements.</p>
-      <p>JupiterOne generates alerts on changes and events such as log tampering.</p>
-      <p><strong>Password Security</strong></p>
-      <p>JupiterOne requires employees to use strong passwords and to change their passwords regularly.</p>
-      <p>JupiterOne implements password lockout policies to prevent brute-force attacks.</p>
-      <p>JupiterOne uses multi-factor authentication (MFA) for remote network access and API access.</p>
-
-      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Corporate Security</h2>
-      <p><strong>Asset Management Practices</strong></p>
-      <p>JupiterOne maintains an inventory of all corporate assets, including hardware, software, and data.</p>
-      <p>JupiterOne has a process for tracking and controlling access to corporate assets.</p>
-      <p>JupiterOne has a process for disposing of corporate assets in a secure manner.</p>
-      <p><strong>Email Protection</strong></p>
-      <p>JupiterOne uses a variety of email security measures, including spam filtering, content filtering, and malware scanning.</p>
-      <p>JupiterOne employees are trained on how to identify and avoid phishing attacks.</p>
-      <p><strong>Employee Training</strong></p>
-      <p>JupiterOne has annual security training and targeted training on password management and MFA.</p>
-      <p><strong>HR Security</strong></p>
-      <p>JupiterOne performs background checks on new hires and securely offboards departing employees.</p>
-      <p><strong>Incident Response</strong></p>
-      <p>A well-defined plan is in place for addressing and mitigating security incidents.</p>
-      <p><strong>Internal Assessments</strong></p>
-      <p>JupiterOne performs regular internal evaluations for vulnerabilities.</p>
-
-      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Endpoint Security</h2>
-      <p><strong>Disk Encryption</strong></p>
-      <p>All employee workstations have full-disk encryption.</p>
-      <p><strong>DNS Filtering</strong></p>
-      <p>Malicious traffic is blocked using DNS filtering and network monitoring.</p>
-      <p><strong>Endpoint Detection and Response</strong></p>
-      <p>SentinelOne is installed on all devices for continuous monitoring and response.</p>
+      <p><strong>Data Access</strong><br>
+      JupiterOne encrypts all data at rest and in transit.<br>
+      Role-based access control (RBAC) ensures employees only access what they need.<br>
+      Regular access reviews and 24-hour removal for terminated employees.</p>
+      <p><strong>Logging</strong><br>
+      Logging tools track activity, endpoints, infrastructure.<br>
+      Logs are retained per regulation and generate tampering alerts.</p>
+      <p><strong>Password Security</strong><br>
+      Strong passwords, lockouts, and MFA required for access.</p>
     </td>
-
-    <td style="width: 33%; padding: 10px;">
+    <td style="width: 33%; padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">App Security</h2>
-      <p><strong>Code Analysis</strong></p>
-      <p>All code runs through automated testing, static code analysis, and requires peer approval before deployment.</p>
-      <p><strong>Credential Management</strong></p>
-      <p>Secrets are stored in AWS Key Management Service. MFA is required for sensitive access.</p>
-      <p><strong>Software Development Lifecycle</strong></p>
-      <p>Includes version control, CI, automated linting, end-to-end tests, and segregation of duties.</p>
-      <p><strong>Vulnerability and Patch Management</strong></p>
-      <p>Dependabot and Google Cloud Run scan for vulnerabilities. Monthly patching of high-risk systems.</p>
-      <p><strong>Web Application Firewall</strong></p>
-      <p>GCP WAF with 24/7 monitoring and updates. Palo Alto GlobalProtect handles workstation traffic.</p>
-
-      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Data Privacy</h2>
-      <p><strong>Cookies</strong></p>
-      <p>Cookies and similar tracking tools are used to improve services.</p>
-      <p><strong>Data Breach Notifications</strong></p>
-      <p>Customers are notified promptly in case of breaches with containment strategies in place.</p>
-      <p><strong>Employee Privacy Training</strong></p>
-      <p>Employees must complete security training and acknowledge the code of conduct.</p>
-      <p><strong>Data Security White Paper</strong></p>
-      <p>Available upon request.</p>
-
-      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Infrastructure</h2>
-      <p><strong>AWS Infrastructure</strong></p>
-      <p>Uses AWS IAM, Security Groups, and other native controls. Physical security by AWS.</p>
-      <p><strong>Anti-DDoS</strong></p>
-      <p>GCP's Cloud Armor protects against volumetric DDoS attacks.</p>
-      <p><strong>BC/DR</strong></p>
-      <p>Business continuity plan includes backups, replication, and failover capabilities.</p>
-      <p><strong>Infrastructure Security</strong></p>
-      <p>Uses firewalls, IDS/IPS, XDR, encryption, scanning, and separate production environments.</p>
+      <p><strong>Code Analysis</strong><br>
+      Automated testing, static code analysis, and peer approval required.</p>
+      <p><strong>Credential Management</strong><br>
+      AWS KMS manages secrets. MFA is required for sensitive systems.</p>
+      <p><strong>Software Development Lifecycle</strong><br>
+      Includes CI/CD, version control, linting, testing, and segregation of duties.</p>
+      <p><strong>Patch Management</strong><br>
+      Monthly high-risk patching using Dependabot and Google Cloud Run.</p>
+      <p><strong>Web Application Firewall</strong><br>
+      GCP WAF and Palo Alto’s GlobalProtect provide 24/7 monitored protection.</p>
     </td>
-
-    <td style="width: 33%; padding: 10px;">
+    <td style="width: 33%; padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Business Continuity</h2>
-      <p><strong>RTO/RPO</strong></p>
-      <p>Recovery Time Objective: &lt;24 Hours<br>Recovery Point Objective: &lt;24 Hours</p>
-      <p><strong>Hosting</strong></p>
-      <p>Hosted in Amazon AWS (US-East) by default.</p>
+      <p><strong>RTO/RPO</strong><br>
+      RTO &lt; 24 hours<br>
+      RPO &lt; 24 hours</p>
+      <p><strong>Hosting</strong><br>
+      Default: AWS US-East</p>
+    </td>
+  </tr>
 
+  <tr>
+    <td style="padding: 10px; vertical-align: top;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Corporate Security</h2>
+      <p><strong>Asset Management</strong><br>
+      Tracks hardware/software/data with secure disposal processes.</p>
+      <p><strong>Email Protection</strong><br>
+      Spam/malware filters + phishing training.</p>
+      <p><strong>HR & Training</strong><br>
+      Annual security training, background checks, secure offboarding.</p>
+      <p><strong>Incident Response</strong><br>
+      Plan in place to mitigate incidents.</p>
+      <p><strong>Internal Assessments</strong><br>
+      Regular internal security reviews conducted.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Data Privacy</h2>
+      <p><strong>Cookies</strong><br>
+      Tracking used to improve services.</p>
+      <p><strong>Breach Notification</strong><br>
+      Prompt notification and containment strategies in place.</p>
+      <p><strong>Employee Privacy Training</strong><br>
+      Security and conduct training required.</p>
+      <p><strong>White Paper</strong><br>
+      Available on request.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Data Security</h2>
-      <p><strong>Access Reviews</strong></p>
-      <p>Quarterly reviews of internal application access.</p>
-      <p><strong>Backups</strong></p>
-      <p>Daily backups; annually tested.</p>
-      <p><strong>Data Erasure</strong></p>
-      <p>Data deleted 30 days after contract end.</p>
-      <p><strong>Encryption</strong></p>
-      <p>At rest: AES-256<br>In transit: TLS 1.2+</p>
-      <p><strong>Physical Security</strong></p>
-      <p>Managed by AWS.</p>
+      <p><strong>Access Reviews</strong><br>
+      Conducted quarterly.</p>
+      <p><strong>Backups</strong><br>
+      Daily, tested annually.</p>
+      <p><strong>Data Deletion</strong><br>
+      30 days post-contract end.</p>
+      <p><strong>Encryption</strong><br>
+      AES-256 at rest, TLS 1.2+ in transit.</p>
+      <p><strong>Physical Security</strong><br>
+      Managed by AWS.</p>
+    </td>
+  </tr>
 
+  <tr>
+    <td style="padding: 10px; vertical-align: top;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Endpoint Security</h2>
+      <p>Full-disk encryption on workstations.<br>
+      DNS filtering and SentinelOne EDR deployed.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Infrastructure</h2>
+      <p><strong>AWS/GCP</strong><br>
+      IAM, security groups, compliance.<br>
+      Google Cloud Armor for DDoS.</p>
+      <p><strong>BC/DR</strong><br>
+      Data replication and failover in place.</p>
+      <p><strong>Security Tools</strong><br>
+      IDS/IPS, firewalls, patching, XDR, separate prod env.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Legal</h2>
-      <p><strong>Subprocessors</strong></p>
-      <p>List available online.</p>
-      <p><strong>Cyber Insurance</strong></p>
-      <p>Policy in place covering security incidents.</p>
-      <p><strong>Terms & Policies</strong></p>
-      <p>Terms of Service and Privacy Policy are published.</p>
+      <p>Subprocessor list online.<br>
+      Cyber insurance in place.<br>
+      Published TOS and Privacy Policy.</p>
+    </td>
+  </tr>
 
+  <tr>
+    <td style="padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Network Security</h2>
-      <p><strong>DMARC</strong></p>
-      <p>Enabled for JupiterOne.com.</p>
-      <p><strong>Firewall</strong></p>
-      <p>Configured on AWS to control ingress/egress.</p>
-      <p><strong>IDS/IPS</strong></p>
-      <p>Robust detection for unauthorized activity.</p>
-      <p><strong>Traffic Filtering</strong></p>
-      <p>All traffic monitored and filtered.</p>
-      <p><strong>Virtual Private Cloud</strong></p>
-      <p>VPCs are actively protected.</p>
-
+      <p>DMARC enabled.<br>
+      AWS firewall configured.<br>
+      IDS/IPS detects threats.<br>
+      All web traffic filtered.<br>
+      VPCs protected.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Policies</h2>
-      <p>All available upon request:<br>
-      Vendor Management Policy<br>
-      Privacy Policy<br>
-      BCDR Policy<br>
-      Code Deployment Policy<br>
-      Incident Response Plan<br>
-      Information Security Policy<br>
-      Data Backup Policy</p>
-
+      <p>All available on request:<br>
+      Vendor, Privacy, BCDR, Deployment, IRP, InfoSec, Backup.</p>
+    </td>
+    <td style="padding: 10px; vertical-align: top;">
       <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Product Security</h2>
-      <p><strong>Audit Logging</strong></p>
-      <p>Logs include user ID, timestamp, IP, event. Access limited to authorized engineers.</p>
-      <p><strong>Data Security</strong></p>
-      <p>Data is encrypted at rest and in transit, with RBAC and cloud provider physical security.</p>
-      <p><strong>MFA</strong></p>
-      <p>Required for critical system access and vendor networks.</p>
-      <p><strong>RBAC</strong></p>
-      <p>Access based on least privilege and job responsibility.</p>
-      <p><strong>SSO</strong></p>
-      <p>SSO is supported.</p>
+      <p>Audit logs include user ID, IP, timestamp.<br>
+      Encryption at rest/transit.<br>
+      Role-based access.<br>
+      MFA and SSO supported.</p>
     </td>
   </tr>
 </table>
