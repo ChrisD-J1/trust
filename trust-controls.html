@@ -59,10 +59,10 @@
                   <div class="med-divider"></div>
                </div>
 
-<table style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <tr valign="top">
     <td style="width: 33%; padding: 10px;">
-      <h2 id="access-control" style="background-color: #000; color: #02c1a8; padding: 10px;">Access Control</h2>
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Access Control</h2>
       <p><strong>Data Access</strong></p>
       <p>JupiterOne encrypts all data at rest and in transit.</p>
       <p>JupiterOne implements RBAC...</p>
@@ -72,28 +72,10 @@
       <p>Multiple logging tools in place...</p>
       <p><strong>Password Security</strong></p>
       <p>Strong passwords required...</p>
-
-      <h2 id="data-privacy" style="background-color: #000; color: #02c1a8; padding: 10px;">Data Privacy</h2>
-      <p><strong>Cookies</strong></p>
-      <p>Uses Cookies and tracking tech...</p>
-      <p><strong>Data Breach Notifications</strong></p>
-      <p>Customers notified promptly...</p>
-      <p><strong>Employee Privacy Training</strong></p>
-      <p>Mandatory training required...</p>
-      <p><strong>Data Security White Paper</strong></p>
-      <p>Available upon request.</p>
-
-      <h2 id="endpoint-security" style="background-color: #000; color: #02c1a8; padding: 10px;">Endpoint Security</h2>
-      <p><strong>Disk Encryption</strong></p>
-      <p>Full-disk encryption used...</p>
-      <p><strong>DNS Filtering</strong></p>
-      <p>Network monitoring solution...</p>
-      <p><strong>Endpoint Detection</strong></p>
-      <p>SentinelOne used...</p>
     </td>
 
     <td style="width: 33%; padding: 10px;">
-      <h2 id="app-security" style="background-color: #000; color: #02c1a8; padding: 10px;">App Security</h2>
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">App Security</h2>
       <p><strong>Code Analysis</strong></p>
       <p>Automated testing...</p>
       <p><strong>Credential Management</strong></p>
@@ -104,8 +86,34 @@
       <p>Formal patch process...</p>
       <p><strong>WAF</strong></p>
       <p>Firewall setup on GCP...</p>
+    </td>
 
-      <h2 id="corporate-security" style="background-color: #000; color: #02c1a8; padding: 10px;">Corporate Security</h2>
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Business Continuity</h2>
+      <p><strong>RTO</strong></p>
+      <p>&lt;24 Hours</p>
+      <p><strong>RPO</strong></p>
+      <p>&lt;24 Hours</p>
+      <p><strong>Hosting</strong></p>
+      <p>Amazon AWS (USA East)</p>
+    </td>
+  </tr>
+
+  <tr valign="top">
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Data Privacy</h2>
+      <p><strong>Cookies</strong></p>
+      <p>Uses Cookies and tracking tech...</p>
+      <p><strong>Data Breach Notifications</strong></p>
+      <p>Customers notified promptly...</p>
+      <p><strong>Employee Privacy Training</strong></p>
+      <p>Mandatory training required...</p>
+      <p><strong>Data Security White Paper</strong></p>
+      <p>Available upon request.</p>
+    </td>
+
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Corporate Security</h2>
       <p><strong>Asset Management</strong></p>
       <p>Inventory of assets maintained...</p>
       <p><strong>Email Protection</strong></p>
@@ -118,8 +126,38 @@
       <p>Response plan in place...</p>
       <p><strong>Internal Assessments</strong></p>
       <p>Regular internal evaluations...</p>
+    </td>
 
-      <h2 id="network-security" style="background-color: #000; color: #02c1a8; padding: 10px;">Network Security</h2>
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Data Security</h2>
+      <p><strong>Access Reviews</strong></p>
+      <p>Quarterly access reviews...</p>
+      <p><strong>Backups</strong></p>
+      <p>Daily backups performed...</p>
+      <p><strong>Data Erasure</strong></p>
+      <p>Data deleted after 30 days...</p>
+      <p><strong>Encryption-at-rest</strong></p>
+      <p>AES-256 used...</p>
+      <p><strong>Encryption-in-transit</strong></p>
+      <p>TLS 1.2+ used...</p>
+      <p><strong>Physical Security</strong></p>
+      <p>Managed by AWS...</p>
+    </td>
+  </tr>
+
+  <tr valign="top">
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Endpoint Security</h2>
+      <p><strong>Disk Encryption</strong></p>
+      <p>Full-disk encryption used...</p>
+      <p><strong>DNS Filtering</strong></p>
+      <p>Network monitoring solution...</p>
+      <p><strong>Endpoint Detection</strong></p>
+      <p>SentinelOne used...</p>
+    </td>
+
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Network Security</h2>
       <p><strong>DMARC</strong></p>
       <p>DMARC enabled...</p>
       <p><strong>Firewall</strong></p>
@@ -133,29 +171,7 @@
     </td>
 
     <td style="width: 33%; padding: 10px;">
-      <h2 id="business-continuity" style="background-color: #000; color: #02c1a8; padding: 10px;">Business Continuity</h2>
-      <p><strong>RTO</strong></p>
-      <p>&lt;24 Hours</p>
-      <p><strong>RPO</strong></p>
-      <p>&lt;24 Hours</p>
-      <p><strong>Hosting</strong></p>
-      <p>Amazon AWS (USA East)</p>
-
-      <h2 id="data-security" style="background-color: #000; color: #02c1a8; padding: 10px;">Data Security</h2>
-      <p><strong>Access Reviews</strong></p>
-      <p>Quarterly access reviews...</p>
-      <p><strong>Backups</strong></p>
-      <p>Daily backups performed...</p>
-      <p><strong>Data Erasure</strong></p>
-      <p>Data deleted after 30 days...</p>
-      <p><strong>Encryption-at-rest</strong></p>
-      <p>AES-256 used...</p>
-      <p><strong>Encryption-in-transit</strong></p>
-      <p>TLS 1.2+ used...</p>
-      <p><strong>Physical Security</strong></p>
-      <p>Managed by AWS...</p>
-
-      <h2 id="infrastructure" style="background-color: #000; color: #02c1a8; padding: 10px;">Infrastructure</h2>
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Infrastructure</h2>
       <p><strong>AWS</strong></p>
       <p>Infrastructure hosted on AWS...</p>
       <p><strong>Anti-DDoS</strong></p>
@@ -166,16 +182,22 @@
       <p>Dedicated security team...</p>
       <p><strong>Separate Prod</strong></p>
       <p>Separate production environment...</p>
+    </td>
+  </tr>
 
-      <h2 id="legal" style="background-color: #000; color: #02c1a8; padding: 10px;">Legal</h2>
+  <tr valign="top">
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Legal</h2>
       <p><strong>Subprocessors</strong></p>
       <p>List available online.</p>
       <p><strong>Cyber Insurance</strong></p>
       <p>Insurance policy maintained...</p>
       <p><strong>ToS & Privacy</strong></p>
       <p>Available on request...</p>
+    </td>
 
-      <h2 id="policies" style="background-color: #000; color: #02c1a8; padding: 10px;">Policies</h2>
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Policies</h2>
       <p><strong>Vendor Management</strong></p>
       <p>Available upon request.</p>
       <p><strong>Privacy Policy</strong></p>
@@ -190,8 +212,10 @@
       <p>Available upon request.</p>
       <p><strong>Backup Policy</strong></p>
       <p>Available upon request.</p>
+    </td>
 
-      <h2 id="product-security" style="background-color: #000; color: #02c1a8; padding: 10px;">Product Security</h2>
+    <td style="width: 33%; padding: 10px;">
+      <h2 style="background-color: #000; color: #02c1a8; padding: 10px;">Product Security</h2>
       <p><strong>Audit Logging</strong></p>
       <p>All activity logged...</p>
       <p><strong>Encryption</strong></p>
