@@ -16,26 +16,30 @@
       <link href="https://cdn.prod.website-files.com/6266ff495972f5842b11a116/628cf51d4283cd71aa6d47e0_favicon.png" rel="apple-touch-icon">
 
       <!-- This style is for the pop up container -->
-  <style>
+    <style>
     .popup-container {
       position: relative;
       display: inline-block;
       cursor: pointer;
-      margin-bottom: 20px;
     }
 
     .popup-text {
       visibility: hidden;
-      width: 400px;
+      width: 400px; /* Increased width */
       background-color: #333;
       color: #fff;
-      text-align: left;
+      text-align: center;
       padding: 8px;
       border-radius: 6px;
+
+      /* Position the popup */
       position: absolute;
       z-index: 1;
-      bottom: 125%;
-      left: 0;
+      bottom: 125%; /* Position above */
+      left: 50%;
+      transform: translateX(-50%);
+
+      /* Fade-in effect */
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -49,7 +53,8 @@
       content: "";
       position: absolute;
       top: 100%;
-      left: 10px;
+      left: 50%;
+      margin-left: -5px;
       border-width: 5px;
       border-style: solid;
       border-color: #333 transparent transparent transparent;
@@ -83,7 +88,7 @@
             <div id="Latest-post" class="w-container">
 
                <div class="section-heading">
-                  <h2 class="section-title">Compliance Documents</h2>
+                  <h2 class="section-title">1Compliance Documents</h2>
                   <div class="med-divider"></div>
                </div>
 
