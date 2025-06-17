@@ -16,7 +16,7 @@
       <link href="https://cdn.prod.website-files.com/6266ff495972f5842b11a116/628cf51d4283cd71aa6d47e0_favicon.png" rel="apple-touch-icon">
 
       <!-- This style is for the pop up container -->
-        <style>
+          <style>
     .popup-container {
       position: relative;
       display: inline-block;
@@ -25,21 +25,20 @@
 
     .popup-text {
       visibility: hidden;
-      width: 200px;
+      width: 400px;
       background-color: #333;
       color: #fff;
-      text-align: center;
+      text-align: left; /* Left-align the text inside */
       padding: 8px;
       border-radius: 6px;
 
       /* Position the popup */
       position: absolute;
       z-index: 1;
-      bottom: 125%; /* Position above */
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: 125%;
+      left: 0; /* Align popup to the left of container */
 
-      /* Add a fade-in effect */
+      /* Fade-in effect */
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -49,18 +48,17 @@
       opacity: 1;
     }
 
-    /* Optional: arrow */
     .popup-text::after {
       content: "";
       position: absolute;
       top: 100%;
-      left: 50%;
-      margin-left: -5px;
+      left: 10px; /* arrow positioned near the left */
       border-width: 5px;
       border-style: solid;
       border-color: #333 transparent transparent transparent;
     }
   </style>
+      <!-- Style end -->
       
    </head>
    <body>      
