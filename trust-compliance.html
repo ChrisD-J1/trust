@@ -19,8 +19,11 @@
   <style>
     .popup-container {
       position: relative;
-      display: inline-block;
+      display: inline-block; /* or block if you want full width */
       cursor: pointer;
+      background: rgba(255, 0, 0, 0.1); /* Light red for debug */
+      padding: 5px;
+      max-width: 300px; /* to constrain the container width */
     }
 
     .popup-text {
@@ -35,8 +38,10 @@
       z-index: 1;
       bottom: 125%;
       left: 0;
+      white-space: normal; /* allow wrapping */
       opacity: 0;
       transition: opacity 0.3s;
+      box-sizing: border-box;
     }
 
     .popup-container:hover .popup-text {
