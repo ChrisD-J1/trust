@@ -176,7 +176,7 @@ img {
 .button {
   padding: 12px 31px;
   border-radius: 3px;
-  background-color: #dd783f;
+  background-color: #02c1a8;
   -webkit-transition: background-color 200ms ease, color 200ms ease;
   transition: background-color 200ms ease, color 200ms ease;
   font-family: Oxygen, sans-serif;
@@ -185,7 +185,7 @@ img {
 }
 
 .button:hover {
-  background-color: #02c1a8;
+  background-color: #dd783f;
   color: #fff;
 }
 
