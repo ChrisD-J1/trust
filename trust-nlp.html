@@ -128,15 +128,21 @@
       });
     }
 
-    // Initialize everything
-    async function init() {
-      await loadQA();
-      await loadModel();
-      document.getElementById('searchBox').addEventListener('input', search);
-      document.getElementById('results').innerHTML = '<p>Type your question above to search.</p>';
-    }
+// Initialize everything
+async function init() {
+  await loadQA();
+  await loadModel();
 
-    init();
+  let debounceTimeout;
+  document.getElementById('searchBox').addEventListener('input', () => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(search, 300);
+  });
+
+  document.getElementById('results').innerHTML = '<p>Type your question above to search.</p>';
+}
+
+init();
   </script>
 
 </body>
