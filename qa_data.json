@@ -1,27 +1,126 @@
 [
   {
-    "question": "How do I reset my password?",
-    "answer": "Click on 'Forgot Password' at login and follow the instructions.",
-    "embedding": [0.1, 0.2, 0.3]
+    "question": "Access Reviews",
+    "answer": "JupiterOne conducts quarterly access reviews across all internal applications to ensure least privilege access is maintained and to remove stale or unnecessary entitlements."
   },
   {
-    "question": "What is your data retention policy?",
-    "answer": "We retain data for 12 months after account deletion.",
-    "embedding": [0.2, 0.1, 0.4]
+    "question": "AI",
+    "answer": "JupiterOne evaluates and integrates AI features responsibly, with governance controls in place to manage model access, data flow, and output validation."
   },
   {
-    "question": "How can I contact support?",
-    "answer": "Email support@example.com or use the chat widget.",
-    "embedding": [0.4, 0.2, 0.1]
+    "question": "Anti-DDoS",
+    "answer": "The infrastructure is protected against volumetric and protocol-based distributed denial-of-service attacks through AWS native protections and monitoring."
   },
   {
-    "question": "Do you offer two-factor authentication?",
-    "answer": "Yes, you can enable 2FA in your security settings.",
-    "embedding": [0.3, 0.3, 0.2]
+    "question": "App Security",
+    "answer": "JupiterOne enforces secure coding standards and best practices throughout development to reduce vulnerabilities."
   },
   {
-    "question": "Is your platform SOC 2 compliant?",
-    "answer": "Yes, we are SOC 2 Type II certified as of 2024.",
-    "embedding": [0.2, 0.4, 0.1]
+    "question": "Asset Management",
+    "answer": "JupiterOne maintains an accurate inventory of all corporate assets, including hardware, software, and SaaS resources."
+  },
+  {
+    "question": "Audit Logging",
+    "answer": "JupiterOne records detailed logs of critical system events, including user access, configuration changes, and data access, with metadata such as user ID, timestamp, and IP address."
+  },
+  {
+    "question": "Authentication",
+    "answer": "Enforces strong password policies, regular rotation, SSO integration, and secure API authentication mechanisms."
+  },
+  {
+    "question": "AWS",
+    "answer": "JupiterOne leverages Amazon Web Services (AWS) infrastructure, utilizing security groups, Identity and Access Management (IAM), Virtual Private Clouds (VPCs), and AWS-native encryption to ensure a secure cloud environment."
+  },
+  {
+    "question": "Backups Enabled",
+    "answer": "Critical data is backed up daily with encryption and redundancy; backup integrity is tested annually."
+  },
+  {
+    "question": "BC/DR",
+    "answer": "JupiterOne maintains a formal Business Continuity and Disaster Recovery plan, tested annually, to ensure operational resilience."
+  },
+  {
+    "question": "BitSight",
+    "answer": "720/820"
+  },
+  {
+    "question": "Business Continuity and Disaster Recovery Policy",
+    "answer": "A documented policy governs procedures for maintaining business functions during disruptions and recovering IT systems."
+  },
+  {
+    "question": "Change Management Policy - Code Deployment",
+    "answer": "A formal change management policy ensures code changes are reviewed, tested, and approved prior to production deployment."
+  },
+  {
+    "question": "Code Analysis",
+    "answer": "All application code undergoes static and dynamic analysis tools as well as manual review prior to deployment to production."
+  },
+  {
+    "question": "Continuous Monitoring",
+    "answer": "Continuous control monitoring and anomaly detection is enforced across systems, leveraging AWS native tools and third-party monitoring solutions."
+  },
+  {
+    "question": "Cookies",
+    "answer": "JupiterOne uses cookies and similar tracking technologies to manage user sessions and gather analytics, with consent management to comply with relevant privacy regulations."
+  },
+  {
+    "question": "Corporate Address",
+    "answer": "JupiterOne, Inc., 600 Park Offices Drive, Suite 250, Durham, NC 27709 (Corporate HQ) | PO Box 110065, Durham, NC 27709 (Mailing Address)"
+  },
+  {
+    "question": "Corporate Address (Subsidiary)",
+    "answer": "JupiterOne International Ltd. (UK Wholly Owned Subsidiary), 5 New Street Square, London, EC4A 3TW (Formed April 12, 2023)"
+  },
+  {
+    "question": "Corporate Phone",
+    "answer": "Phone Toll Free: 833-578-7663, Local: 919-629-3638 / 919-664-7000"
+  },
+  {
+    "question": "Corporate Security",
+    "answer": "JupiterOne maintains comprehensive corporate security measures, including physical asset protection, access control, and environmental safeguards."
+  },
+  {
+    "question": "Credential Management",
+    "answer": "Infrastructure secrets and credentials are stored securely in AWS Key Management Services with strict access controls."
+  },
+  {
+    "question": "Cyber Insurance",
+    "answer": "JupiterOne maintains cyber liability insurance covering breach response and associated liabilities."
+  },
+  {
+    "question": "Data Access",
+    "answer": "Access to sensitive customer and corporate data is tightly controlled, logged, and reviewed regularly."
+  },
+  {
+    "question": "Data Backup Policy",
+    "answer": "Defines backup schedules, storage, encryption standards, retention periods, and restoration testing requirements."
+  },
+  {
+    "question": "Data Breach Notifications",
+    "answer": "Customers are promptly notified in the event of a confirmed data breach, with transparency about scope and remediation."
+  },
+  {
+    "question": "Data Erasure",
+    "answer": "Customer data is securely deleted within 30 days post-contract in accordance with recognized data sanitization standards."
+  },
+  {
+    "question": "Data Privacy",
+    "answer": "JupiterOne complies with privacy regulations and implements controls to protect personal information."
+  },
+  {
+    "question": "Disk Encryption",
+    "answer": "Employee devices and corporate storage use full-disk encryption to safeguard data confidentiality."
+  },
+  {
+    "question": "DMARC",
+    "answer": "DMARC (Domain-based Message Authentication, Reporting, and Conformance) is implemented to reduce email spoofing and phishing risks for JupiterOne domains."
+  },
+  {
+    "question": "DNS Filtering",
+    "answer": "Internet traffic is filtered via DNS-based security solutions that block access to malicious domains and protect against phishing threats."
+  },
+  {
+    "question": "EIN, DUNS, CAGE, NAIC, SIC",
+    "answer": "EIN 85-1643254 | DUNS: | CAGE: | NAIC Classification: 511210 | NAIC Description: Software Publishers | Standard Industrial Classification (SIC) 62090 - Other information technology service activities."
   }
 ]
