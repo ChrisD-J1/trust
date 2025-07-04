@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple NLP Q&A Search</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 40px auto; }
+    input { width: 100%; padding: 12px; font-size: 16px; }
+    .qa { margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Ask a Question</h2>
+  <input id="searchBox" placeholder="e.g., How do I contact support?" />
+  <div id="results"></div>
+
+  <script>
+    let qaData = [];
+
+    // Dummy "similarity" using shared keywords
+    function similarity(q1, q2) {
+      const set1 = new Set(q1.toLowerCase().split(/\W+/));
+      const set2 = new Set(q2.toLowerCase().split(/\W+/));
+      const intersection = [...set1].filter(word => set2.has(word));
+      return intersection.length;
+    }
+
+    async function loadQA() {
+      const res = await fetch('qa_data.json');
+      qaData = await res.json();
+    }
+
+    async function search() {
+      const query = document.getElementById('searchBox').value;
+      const scored = qaData.map(qa => ({
+        ...qa,
+        score: similarity(query, qa.question)
+      }));
+      const sorted = scored.sort((a, b) => b.score - a.score).slice(0, 3);
+
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+      sorted.forEach(({ question, answer, score }) => {
+        if (score > 0) {
+          const div = document.createElement('div');
+          div.className = 'qa';
+          div.innerHTML = `<strong>Q:</strong> ${question}<br><strong>A:</strong> ${answer}`;
+          resultsDiv.appendChild(div);
+        }
+      });
+    }
+
+    document.getElementById('searchBox').addEventListener('input', search);
+    loadQA();
+  </script>
+</body>
+</html>
