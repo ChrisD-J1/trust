@@ -132,13 +132,16 @@
 async function init() {
   await loadQA();
   await loadModel();
-
-  let debounceTimeout;
-  document.getElementById('searchBox').addEventListener('input', () => {
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(search, 300);
-  });
-
+  
+let debounceTimeout;
+document.getElementById('searchBox').addEventListener('input', () => {
+  clearTimeout(debounceTimeout);
+  debounceTimeout = setTimeout(() => {
+    console.log("Running search...");
+    search();
+  }, 300);
+});
+  
   document.getElementById('results').innerHTML = '<p>Type your question above to search.</p>';
 }
 
