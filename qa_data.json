@@ -1,0 +1,27 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "answer": "Click on 'Forgot Password' at login and follow the instructions.",
+    "embedding": [0.1, 0.2, 0.3]
+  },
+  {
+    "question": "What is your data retention policy?",
+    "answer": "We retain data for 12 months after account deletion.",
+    "embedding": [0.2, 0.1, 0.4]
+  },
+  {
+    "question": "How can I contact support?",
+    "answer": "Email support@example.com or use the chat widget.",
+    "embedding": [0.4, 0.2, 0.1]
+  },
+  {
+    "question": "Do you offer two-factor authentication?",
+    "answer": "Yes, you can enable 2FA in your security settings.",
+    "embedding": [0.3, 0.3, 0.2]
+  },
+  {
+    "question": "Is your platform SOC 2 compliant?",
+    "answer": "Yes, we are SOC 2 Type II certified as of 2024.",
+    "embedding": [0.2, 0.4, 0.1]
+  }
+]
