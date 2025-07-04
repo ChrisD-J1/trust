@@ -35,20 +35,18 @@
 </head>
 <body>
 
-  <h1>JupiterOne Semantic Q&A Search</h1>
+  <h1>JupiterOne Semantic Q&A Search Live</h1>
   <input id="searchBox" placeholder="Ask a question, e.g. 'How do I reset my password?'" autocomplete="off" />
-  <div id="results"><p>Type your question above to search.</p></div>
+  <div id="results"></div>
 
   <script>
     let qaData = [];
     let model = null;
-    let queryEmbedding = null;
 
     async function loadQA() {
       const response = await fetch('jupiterone_qa_with_embeddings.json');
       qaData = await response.json();
       console.log(`Loaded ${qaData.length} Q&A items`);
-      console.log("Sample embedding:", qaData[0]?.embedding);
     }
 
     async function loadModel() {
@@ -57,13 +55,16 @@
     }
 
     function cosineSimilarity(vecA, vecB) {
-      let dot = 0.0, normA = 0.0, normB = 0.0;
+      let dot = 0.0;
+      let normA = 0.0;
+      let normB = 0.0;
       for (let i = 0; i < vecA.length; i++) {
         dot += vecA[i] * vecB[i];
         normA += vecA[i] * vecA[i];
         normB += vecB[i] * vecB[i];
       }
-      return (normA === 0 || normB === 0) ? 0 : dot / (Math.sqrt(normA) * Math.sqrt(normB));
+      if (normA === 0 || normB === 0) return 0;
+      return dot / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 
     async function embedQuery(query) {
@@ -88,23 +89,19 @@
         return;
       }
 
-      console.log("Running search...");
-
-      queryEmbedding = await embedQuery(query);
+      const queryEmbedding = await embedQuery(query);
 
       const scored = qaData.map(item => {
-        const vec = Array.isArray(item.embedding)
-          ? item.embedding
-          : JSON.parse(item.embedding);
-
-        return {
-          ...item,
-          score: cosineSimilarity(queryEmbedding, vec)
-        };
+        const score = cosineSimilarity(queryEmbedding, item.embedding);
+        console.log(`Q: ${item.question} — Score: ${score.toFixed(3)}`);
+        return { ...item, score };
       });
 
-      scored.sort((a, b) => b.score - a.score);
-      const topResults = scored.slice(0, 5).filter(r => r.score > 0.1);
+      // Lower threshold here to catch more results (try 0.1 or 0.05)
+      const topResults = scored
+        .filter(item => item.score > 0.1)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5);
 
       if (topResults.length === 0) {
         resultsDiv.innerHTML = '<p>No matching results found.</p>';
@@ -130,8 +127,13 @@
       let debounceTimeout;
       document.getElementById('searchBox').addEventListener('input', () => {
         clearTimeout(debounceTimeout);
-        debounceTimeout = setTimeout(search, 300);
+        debounceTimeout = setTimeout(() => {
+          console.log("Running search...");
+          search();
+        }, 300);
       });
+
+      document.getElementById('results').innerHTML = '<p>Type your question above to search.</p>';
     }
 
     init();
