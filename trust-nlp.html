@@ -35,43 +35,37 @@
 </head>
 <body>
 
-  <h1>JupiterOne Semantic Q&A Search.</h1>
+  <h1>JupiterOne Semantic Q&A Search</h1>
   <input id="searchBox" placeholder="Ask a question, e.g. 'How do I reset my password?'" autocomplete="off" />
-  <div id="results"></div>
+  <div id="results"><p>Type your question above to search.</p></div>
 
   <script>
     let qaData = [];
     let model = null;
     let queryEmbedding = null;
 
-    // Load your JSON with embeddings
     async function loadQA() {
       const response = await fetch('jupiterone_qa_with_embeddings.json');
       qaData = await response.json();
       console.log(`Loaded ${qaData.length} Q&A items`);
+      console.log("Sample embedding:", qaData[0]?.embedding);
     }
 
-    // Load the Universal Sentence Encoder model
     async function loadModel() {
       model = await use.load();
       console.log('USE model loaded');
     }
 
-    // Compute cosine similarity between two vectors
     function cosineSimilarity(vecA, vecB) {
-      let dot = 0.0;
-      let normA = 0.0;
-      let normB = 0.0;
+      let dot = 0.0, normA = 0.0, normB = 0.0;
       for (let i = 0; i < vecA.length; i++) {
         dot += vecA[i] * vecB[i];
         normA += vecA[i] * vecA[i];
         normB += vecB[i] * vecB[i];
       }
-      if (normA === 0 || normB === 0) return 0;
-      return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+      return (normA === 0 || normB === 0) ? 0 : dot / (Math.sqrt(normA) * Math.sqrt(normB));
     }
 
-    // Embed the query string using the loaded model
     async function embedQuery(query) {
       const embeddings = await model.embed([query]);
       const array = await embeddings.array();
@@ -79,7 +73,6 @@
       return array[0];
     }
 
-    // Perform search when user types
     async function search() {
       const query = document.getElementById('searchBox').value.trim();
       const resultsDiv = document.getElementById('results');
@@ -95,55 +88,53 @@
         return;
       }
 
+      console.log("Running search...");
+
       queryEmbedding = await embedQuery(query);
 
-      // Score each Q&A by cosine similarity of embeddings
       const scored = qaData.map(item => {
+        const vec = Array.isArray(item.embedding)
+          ? item.embedding
+          : JSON.parse(item.embedding);
+
         return {
           ...item,
-          score: cosineSimilarity(queryEmbedding, item.embedding)
+          score: cosineSimilarity(queryEmbedding, vec)
         };
       });
 
       scored.sort((a, b) => b.score - a.score);
+      const topResults = scored.slice(0, 5).filter(r => r.score > 0.1);
 
-      const topResults = scored.slice(0, 5);
-
-      if (topResults.length === 0 || topResults[0].score === 0) {
+      if (topResults.length === 0) {
         resultsDiv.innerHTML = '<p>No matching results found.</p>';
         return;
       }
 
-topResults.forEach(({ question, answer, score }) => {
-  const div = document.createElement('div');
-  div.className = 'qa';
-  div.innerHTML = `
-    <strong>Q: ${question}</strong>
-    <p>A: ${answer}</p>
-    <div class="score">Similarity: ${score.toFixed(3)}</div>
-  `;
-  resultsDiv.appendChild(div);
-});
+      topResults.forEach(({ question, answer, score }) => {
+        const div = document.createElement('div');
+        div.className = 'qa';
+        div.innerHTML = `
+          <strong>Q: ${question}</strong>
+          <p>A: ${answer}</p>
+          <div class="score">Similarity: ${score.toFixed(3)}</div>
+        `;
+        resultsDiv.appendChild(div);
+      });
+    }
 
+    async function init() {
+      await loadQA();
+      await loadModel();
 
-// Initialize everything
-async function init() {
-  await loadQA();
-  await loadModel();
-  
-let debounceTimeout;
-document.getElementById('searchBox').addEventListener('input', () => {
-  clearTimeout(debounceTimeout);
-  debounceTimeout = setTimeout(() => {
-    console.log("Running search...");
-    search();
-  }, 300);
-});
-  
-  document.getElementById('results').innerHTML = '<p>Type your question above to search.</p>';
-}
+      let debounceTimeout;
+      document.getElementById('searchBox').addEventListener('input', () => {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(search, 300);
+      });
+    }
 
-init();
+    init();
   </script>
 
 </body>
