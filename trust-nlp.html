@@ -114,19 +114,17 @@
         return;
       }
 
-      topResults.forEach(({ question, answer, score }) => {
-        if (score > 0) {
-          const div = document.createElement('div');
-          div.className = 'qa';
-          div.innerHTML = `
-            <strong>Q: ${question}</strong>
-            <p>A: ${answer}</p>
-            <div class="score">Similarity: ${score.toFixed(3)}</div>
-          `;
-          resultsDiv.appendChild(div);
-        }
-      });
-    }
+topResults.forEach(({ question, answer, score }) => {
+  const div = document.createElement('div');
+  div.className = 'qa';
+  div.innerHTML = `
+    <strong>Q: ${question}</strong>
+    <p>A: ${answer}</p>
+    <div class="score">Similarity: ${score.toFixed(3)}</div>
+  `;
+  resultsDiv.appendChild(div);
+});
+
 
 // Initialize everything
 async function init() {
